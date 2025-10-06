@@ -22,14 +22,14 @@ optimizer = torch.optim.SGD(params=model.parameters(),
                             momentum=0.9) #Yani önceki gradyanın %90’ını hatırlayıp, %10’unu yeni gradyanla günceller.
 
 scheduler = StepLR(optimizer=optimizer, #HANGİ OPTIMIZERI KULLNACAĞIMIZ
-                   step_size=20, #KAÇ EPOCH'DA BİR LERANING RATE KÜÇÜLSÜN? BURDA 20
+                   step_size=10, #KAÇ EPOCH'DA BİR LERANING RATE KÜÇÜLSÜN? BURDA 20
                    gamma=0.1) # LEARNING RATE'IN NE KADAR DÜŞECEĞİ BURDA 10 KAT DÜŞÜYOR 0.1 İLE
 
 torch.manual_seed(28)
 epochs = 60
 
 #EARLY STOPPING AYARLARI
-patience = 5
+patience = 8
 triggerTimes = 0
 bestTestLoss = float("inf")
 
