@@ -1,0 +1,5 @@
+*.pt
+DATAS/
+venv/
+__pycache__/
+*.pth
